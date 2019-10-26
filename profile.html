@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/f5732a8163.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="https://cdn.pixabay.com/photo/2016/08/31/11/54/user-1633249_1280.png" />
+  <title> Blogen Admin Area</title>
+</head>
+
+<body>
+  <nav class="navbar  navbar-expand-sm navbar-dark bg-dark p-0">
+    <div class="container">
+      <a href="index.html" class="navbar-brand ml-2">Blogen</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#OpenNav"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="OpenNav">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2 ">
+            <a href="index.html" class="nav-link">Dashboard</a>
+          </li>
+          <li class="nav-item px-2 ">
+            <a href="posts.html" class="nav-link">Posts</a>
+          </li>
+          <li class="nav-item px-2 ">
+            <a href="categories.html" class="nav-link">Categories</a>
+          </li>
+          <li class="nav-item px-2 ">
+            <a href="users.html" class="nav-link">users</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Welcome
+              Vishal</a>
+            <div class="dropdown-menu">
+              <a href="profile.html" class="dropdown-item">
+                <i class="fa fa-user-circle"></i> Profile
+              </a>
+              <a href="settings.html" class="dropdown-item">
+                <i class="fa fa-cog"></i>
+                setting
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link"> <i class="fa fa-user-times"></i> Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="main-header" class="py-2 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><i class="fa fa-user"></i> Edit Profile </h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Actions Buttons -->
+
+  <section id="action" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mr-auto">
+          <a href="index.html" class="btn btn-secondary btn-block">
+            <i class="fa fa-arrow-left"></i> Back to Dashboard
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#passwordModal">
+            <i class="fa fa-lock"></i> Change password
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="btn btn-danger btn-block">
+            <i class="fa fa-trash"></i> Delete Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Profile Edit -->
+
+  <section id="profile">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 ">
+          <img src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916__340.png" alt=""
+            class="d-block img-fluid mb-3 border-radius-50 rounded-circle mx-auto ">
+          <button class=" btn btn-primary btn-block">Edit Image</button>
+          <button class=" btn btn-danger btn-block">Delete Image</button>
+        </div>
+        <div class="col-md-9 mt-sm-0 mt-3">
+          <div class="card">
+            <div class="card-header">
+              <h4>Edit Profile</h4>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label for="title">Name</label>
+                  <input type="text" class="form-control" value="vishal ibitwar">
+                </div>
+                <div class="form-group">
+                  <label for="title">Email</label>
+                  <input type="email" class="form-control" value="Vishal@blogen.com">
+                </div>
+                <div class="form-group">
+                  <label for="body">Body</label>
+                  <textarea name="editor1"
+                    class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ut recusandae tempora mollitia incidunt similique magnam nulla quae, autem sunt nemo odit ab quasi aut consectetur debitis eveniet suscipit culpa deserunt ad accusantium! Earum, facilis sit amet quidem laborum dolorem.</textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block">Save Changes</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer id="main-footer" class="bg-dark text-white mt-5 p-3">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="lead text-center">Copyright &copy; 2019 Blogen</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- password modal -->
+  <div class="modal fade" id="passwordModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Change password</h5>
+          <button class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="password">Current Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="cpassword">New password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="cpassword">Confirm password</label>
+              <input type="password" class="form-control">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button class="btn btn-primary" data-dismiss="modal">Update Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace('editor1');
+  </script>
+</body>
+
+</html>
